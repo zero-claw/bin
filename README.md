@@ -10,10 +10,11 @@ linux ubuntu 24.04
 - 下载
 
 ```bash
-wget https://raw.githubusercontent.com/zero-claw/bin/refs/heads/main/release/zeroclaw-ubuntu24.04-20260218.tgz
-tar -xvf zeroclaw-ubuntu24.04-20260218.tgz
+wget https://raw.githubusercontent.com/zero-claw/bin/refs/heads/main/release/zeroclaw-ubuntu24.04-20260219.tgz
+tar -xvf zeroclaw-ubuntu24.04-20260219.tgz
 cp zeroclaw /usr/bin/
 ```
+
 - 测试安装
 zeroclaw --help
 - 交互配置
@@ -37,6 +38,22 @@ systemctl --user status zeroclaw
 systemctl --user enable zeroclaw
 - 查看服务日志
 journalctl --user -u zeroclaw
+
+### 配对
+
+- 注意：以网关或服务模式启动，默认必须配对才能连接
+在启动日志或控制台输出中查看配对码
+
+curl --request POST --url http://127.0.0.1:3000/pair -H 'X-Pairing-Code: 718820'
+
+### 安全默认行为（关键）
+
+- Gateway 默认绑定：`127.0.0.1:3000`
+- Gateway 默认要求配对：`require_pairing = true`
+- 默认拒绝公网绑定：`allow_public_bind = false`
+- Channel allowlist 语义：
+  - 空列表 `[]` => deny-by-default
+  - `"*"` => allow all（仅在明确知道风险时使用）
 
 ## ubuntu
 
