@@ -10,8 +10,8 @@ linux ubuntu 24.04
 - 下载
 
 ```bash
-wget https://raw.githubusercontent.com/zero-claw/bin/refs/heads/main/release/zeroclaw-ubuntu24.04-20260219.tgz
-tar -xvf zeroclaw-ubuntu24.04-20260219.tgz
+wget https://raw.githubusercontent.com/zero-claw/bin/refs/heads/main/release/zeroclaw-ubuntu24.04-20260220.tgz
+tar -xvf zeroclaw-ubuntu24.04-20260220.tgz
 cp zeroclaw /usr/bin/
 ```
 
@@ -59,4 +59,6 @@ curl --request POST --url http://127.0.0.1:3000/pair -H 'X-Pairing-Code: 718820'
 
 ### ubuntu 24.04
 
+- [zeroclaw-ubuntu24.04-20260220](./release/zeroclaw-ubuntu24.04-20260220.tgz)
+- [zeroclaw-ubuntu24.04-20260219](./release/zeroclaw-ubuntu24.04-20260219.tgz)
 - [zeroclaw-ubuntu24.04-20260218](./release/zeroclaw-ubuntu24.04-20260218.tgz)
